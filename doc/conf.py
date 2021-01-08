@@ -69,6 +69,20 @@ sphinx_gallery_conf = {
     #'reference_url': {
     #    'autosklearn': None
     #},
+    'binder': {
+        # Required keys
+        'org': 'automl',
+        'repo': 'auto-sklearn',
+        'branch': 'gh-pages',
+        # Can be any branch, tag, or commit hash. Use a branch that hosts your docs.
+        'binderhub_url': 'https://mybinder.org',
+        # Any URL of a binderhub deployment. Must be full URL (e.g. https://mybinder.org).
+        'dependencies': ['../binder/apt.txt', '../binder/requirements.txt'],
+        # Optional keys
+        'notebooks_dir': 'doc_debug/notebooks',
+        # Jupyter notebooks for Binder will be copied to this directory (relative to built documentation root).
+        'use_jupyter_lab': True, # Whether Binder links should start Jupyter Lab instead of the Jupyter Notebook interface.
+    },
     'backreferences_dir': None,
     'filename_pattern': 'example.*.py$',
     'ignore_pattern': r'custom_metrics\.py|__init__\.py'
